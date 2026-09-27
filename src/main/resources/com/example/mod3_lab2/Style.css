@@ -1,0 +1,21 @@
+.top-bar {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 12 20;
+}
+.top-bar .title { -fx-text-fill: white; -fx-font-size: 22px; }
+.top-bar .label { -fx-text-fill: white; }
+
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: white; }
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 12;
+    -fx-padding: 12;
+    -fx-spacing: 8;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);
+}
+.card:hover { -fx-border-color: #e63946; }
+.card-title { -fx-font-size: 16px; -fx-font-weight: bold; }

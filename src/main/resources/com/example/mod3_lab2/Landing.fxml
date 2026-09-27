@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@Style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mod3_lab2.LandingController">
+
+    <!-- Top bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="top-bar">
+            <Label styleClass="title" text="Moto Madness Garage" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" />
+            <Button onAction="#handleLogout" text="Log Out" />
+        </HBox>
+    </top>
+
+    <!-- Motorcycle gallery -->
+    <center>
+        <ScrollPane fitToWidth="true">
+            <GridPane alignment="CENTER" hgap="20" vgap="20">
+                <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+
+                <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <ImageView fitHeight="160" fitWidth="240" preserveRatio="true"><Image url="@images/Moto1.jpg" /></ImageView>
+                </VBox>
+
+                <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <ImageView fitHeight="160" fitWidth="240.0"><Image url="@images/Moto6.jpg" /></ImageView>
+                </VBox>
+
+                <VBox styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <ImageView fitHeight="160" fitWidth="240" preserveRatio="true"><Image url="@images/Moto9.jpg" /></ImageView>
+                </VBox>
+
+                <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <ImageView fitHeight="160" fitWidth="240" preserveRatio="true"><Image url="@images/Moto10.jpg" /></ImageView>
+                </VBox>
+
+                <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <ImageView fitHeight="160" fitWidth="240" preserveRatio="true"><Image url="@images/Moto7.jpg" /></ImageView>
+                </VBox>
+
+                <VBox styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <ImageView fitHeight="160" fitWidth="240" preserveRatio="true"><Image url="@images/Moto8.jpg" /></ImageView>
+                </VBox>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </ScrollPane>
+    </center>
+</BorderPane>
